@@ -27,3 +27,28 @@ let find_low_index = (arr, key)=> {
     return -1;
   };
 
+
+  let find_high_index = (arr, key)=> {
+    let low = 0;
+    let high = arr.length - 1;
+    let mid = Math.floor(high / 2);
+  
+    while (low <= high) {
+      let mid_elem = arr[mid];
+  
+      if (mid_elem <= key) {
+        low = mid + 1;
+      } else {
+        //middle greater than key
+        high = mid - 1;
+      }
+  
+      mid = low + Math.floor((high - low) / 2);
+    }
+  
+    if (arr[high] === key) {
+      return high;
+    }
+  
+    return -1;
+  };
