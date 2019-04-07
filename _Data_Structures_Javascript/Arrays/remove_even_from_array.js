@@ -45,3 +45,18 @@ console.log(removeEven([3, 2, 41, 3, 34]))
 
 // Memory Complexity
 // O(n)
+
+
+
+//Solution 3
+//use the filter method
+function removeEven(arr) {
+    return arr.filter((v => (v % 2) != 0))
+}
+
+// Runtime Complexity
+// O(n)
+
+// Memory Complexity
+// O(1)
+
