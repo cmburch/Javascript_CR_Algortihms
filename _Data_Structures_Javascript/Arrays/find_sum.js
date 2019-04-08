@@ -53,3 +53,25 @@ function findSum(arr, value) {
     }
   return false;
 }
+
+
+//Solution #3: Using a Set
+//this is the best solution compared to the other ways
+
+let findSum = (arr,value)=>{
+    let found_values = new Set();
+    let result = [];
+    for (let i in arr) {
+        if (found_values.has(value - arr[i])) {
+           results.push(arr[i]);
+           results.push(value-arr[i]);
+           return results;
+         
+        }
+    
+        found_values.add(arr[i]);
+      }
+    
+      return false;
+
+}
